@@ -44,8 +44,10 @@ body {
 }
 
 .inp_group {
-  margin-top: 20px;
   position: relative;
+  margin: auto;
+  margin-top: 20px;
+  width: calc(100% / 2);
 
   input {
     width: 100%;
@@ -89,5 +91,19 @@ body {
     top: 0;
     color: var(--color-focus);
     font-size: 12px;
+  }
+
+  .register_btn {
+     background-color: #1a73e8;
+     padding: 5px 14px;
+     border: 1px solid #1a73e8;
+     border-radius: 4px;
+     font-size: 14px;
+     color: white;
+     transition: all 0.5s linear;
+
+     &:hover {
+        background-color: #004caf;
+     }
   }
 }
