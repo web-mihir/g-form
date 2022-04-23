@@ -1,0 +1,110 @@
+:root {
+  --color-focus: #174ea6;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.g_form {
+  min-height: 100vh;
+}
+
+.g_form::before {
+  content: "";
+  display: block;
+  box-flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 24px;
+}
+
+.g_form_container {
+  padding: 2rem;
+  width: 70%;
+  margin: auto;
+  color: black;
+  border: 1px solid #dadce0;
+}
+
+.g_form_container h2 {
+  padding: 10px 0;
+  margin-bottom: 5px;
+}
+
+.g_form_container p {
+  font-size: 1.2rem;
+}
+
+.inp_group {
+  margin-top: 20px;
+  position: relative;
+}
+
+.inp_group input {
+  width: 100%;
+  padding: 20px 14px;
+  outline: none;
+  border-radius: 4px;
+  color: #202124;
+  font-size: 14px;
+  background-color: transparent;
+  display: block;
+  height: 24px;
+  line-height: 24px;
+  margin: 0;
+  border: 1px solid #dadce0;
+}
+
+.inp_group input:focus {
+  background-color: #fff;
+  border: 2px solid var(--color-focus);
+}
+
+.inp_group input::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.inp_group input:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.inp_group input::-ms-input-placeholder {
+  opacity: 0;
+}
+
+.inp_group input::placeholder {
+  opacity: 0;
+}
+
+.inp_group label {
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  padding: 0 0.435rem;
+  pointer-events: none;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  background-color: #fff;
+  color: #5f6368;
+  font-size: 14px;
+}
+
+.inp_group input:focus ~ label,
+.inp_group input:not(:placeholder-shown) ~ label {
+  top: 0;
+  color: var(--color-focus);
+  font-size: 12px;
+}
